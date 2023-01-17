@@ -23,6 +23,10 @@
 			"type": "string",
 			"defaultValue": "https://adlsag2222.dfs.core.windows.net/"
 		},
+		"storage-trigger-create_properties_pipeline1_parameters_inputFileName": {
+			"type": "string",
+			"defaultValue": "@triggerBody().fileName"
+		},
 		"storage-trigger-create_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/69456469-0ef6-474c-a4b4-adb1415fdd2f/resourceGroups/rgdemo/providers/Microsoft.Storage/storageAccounts/saag687788hhnnhh"
@@ -65,6 +69,9 @@
 					},
 					"lsdatalake_properties_typeProperties_url": {
 						"value": "[parameters('lsdatalake_properties_typeProperties_url')]"
+					},
+					"storage-trigger-create_properties_pipeline1_parameters_inputFileName": {
+						"value": "[parameters('storage-trigger-create_properties_pipeline1_parameters_inputFileName')]"
 					},
 					"storage-trigger-create_properties_typeProperties_scope": {
 						"value": "[parameters('storage-trigger-create_properties_typeProperties_scope')]"
