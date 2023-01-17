@@ -1,0 +1,73 @@
+{
+	"name": "SourceDataset_0g6",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lsstorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "cars.csv",
+				"container": "mycontainer"
+			},
+			"columnDelimiter": ",",
+			"rowDelimiter": "\n",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Name",
+				"type": "String"
+			},
+			{
+				"name": "mpg",
+				"type": "String"
+			},
+			{
+				"name": "cyl",
+				"type": "String"
+			},
+			{
+				"name": "disp",
+				"type": "String"
+			},
+			{
+				"name": "hp",
+				"type": "String"
+			},
+			{
+				"name": "drat",
+				"type": "String"
+			},
+			{
+				"name": "wt",
+				"type": "String"
+			},
+			{
+				"name": "qsec",
+				"type": "String"
+			},
+			{
+				"name": "vs",
+				"type": "String"
+			},
+			{
+				"name": "am",
+				"type": "String"
+			},
+			{
+				"name": "gear",
+				"type": "String"
+			},
+			{
+				"name": "carb",
+				"type": "String"
+			}
+		]
+	}
+}
