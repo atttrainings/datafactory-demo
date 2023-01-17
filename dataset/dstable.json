@@ -1,0 +1,17 @@
+{
+	"name": "dstable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lssqldb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "cars"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,9 @@
+{
+	"name": "adlsatt",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "443dd281-d6bd-4abd-99b3-f908989a935d",
+		"tenantId": "cacb16f0-ecf0-4759-888d-49ce7093f877"
+	}
+}
