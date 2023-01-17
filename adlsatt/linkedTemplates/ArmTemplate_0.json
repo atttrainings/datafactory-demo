@@ -23,11 +23,11 @@
 			"type": "string",
 			"defaultValue": "https://adlsag2222.dfs.core.windows.net/"
 		},
-		"storage-trigger-create_properties_pipeline1_parameters_inputFileName": {
+		"trigger1_properties_pipeline1_parameters_inputFileName": {
 			"type": "string",
 			"defaultValue": "@triggerBody().fileName"
 		},
-		"storage-trigger-create_properties_typeProperties_scope": {
+		"trigger1_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/69456469-0ef6-474c-a4b4-adb1415fdd2f/resourceGroups/rgdemo/providers/Microsoft.Storage/storageAccounts/saag687788hhnnhh"
 		}
@@ -368,7 +368,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/storage-trigger-create')]",
+			"name": "[concat(parameters('factoryName'), '/trigger1')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -381,18 +381,19 @@
 							"type": "PipelineReference"
 						},
 						"parameters": {
-							"inputFileName": "[parameters('storage-trigger-create_properties_pipeline1_parameters_inputFileName')]"
+							"inputFileName": "[parameters('trigger1_properties_pipeline1_parameters_inputFileName')]"
 						}
 					}
 				],
 				"type": "BlobEventsTrigger",
 				"typeProperties": {
 					"blobPathBeginsWith": "/mycontainer/blobs/",
-					"blobPathEndsWith": "csv",
+					"blobPathEndsWith": ".csv",
 					"ignoreEmptyBlobs": true,
-					"scope": "[parameters('storage-trigger-create_properties_typeProperties_scope')]",
+					"scope": "[parameters('trigger1_properties_typeProperties_scope')]",
 					"events": [
-						"Microsoft.Storage.BlobCreated"
+						"Microsoft.Storage.BlobCreated",
+						"Microsoft.Storage.BlobDeleted"
 					]
 				}
 			},
