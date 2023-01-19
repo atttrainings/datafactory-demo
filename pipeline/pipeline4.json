@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"notebookPath": "/databricks-datalake-spark",
 					"baseParameters": {
-						"adlsFolderName": "flight-csv-data",
+						"adlsFolderName": "flight-csv-data-input",
 						"input": "flight-csv-data-input"
 					}
 				},
